@@ -29,7 +29,7 @@ public class Game {
                     start();
                     break;
                 case 2:
-                    currentPlayer.getGamesWon();
+                    System.out.println(currentPlayer.getGamesWon());
                     break;
                 case 3:
                     finish = false;
