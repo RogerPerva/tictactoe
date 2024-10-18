@@ -1,8 +1,8 @@
-// import java.util.Scanner;
+//import java.util.Scanner;
 
 public class Main {
-    static User currentPlayer = new User('X');
-    static Board board = new Board(3,3);
+//    static User currentPlayer = new User('X');
+//    static Board board = new Board(3,3);
 
 //    private static char[][] board = new char[3][3];
     //private static char currentPlayer = 'X';
@@ -11,30 +11,36 @@ public class Main {
 
 //        initializeBoard();
 //        drawBoard();
-
-        while (true) {
-            int[] move = board.getPlayerMove(currentPlayer);
-            if (board.validateInput(move)) {
-
-                board.setMove(move[0], move[1], currentPlayer.getTurn());
-                board.drawBoard();
-
-                if (board.isWinner()) {
-                    System.out.println("¡Jugador " + currentPlayer + " gana!");
-                    break;
-                }
-
-                if (board.isBoardFull()) {
-                    System.out.println("¡Empate!");
-                    break;
-                }
-
-                board.switchUser(currentPlayer);
-            } else {
-                System.out.println("Movimiento inválido. Intenta de nuevo.");
-            }
-        }
+//        Scanner scanner = new Scanner(System.in);
+//        int a = scanner.nextInt();
+        Game newGame = new Game();
+        newGame.menu();
     }
+}
+
+//        while (true) {
+//            int[] move = board.getPlayerMove(currentPlayer);
+//            if (board.validateInput(move)) {
+//
+//                board.setMove(move[0], move[1], currentPlayer.getTurn());
+//                board.drawBoard();
+//
+//                if (board.isWinner()) {
+//                    System.out.println("¡Jugador " + currentPlayer + " gana!");
+//                    break;
+//                }
+//
+//                if (board.isBoardFull()) {
+//                    System.out.println("¡Empate!");
+//                    break;
+//                }
+//
+//                board.switchUser(currentPlayer);
+//            } else {
+//                System.out.println("Movimiento inválido. Intenta de nuevo.");
+//            }
+//        }
+//    }
 
     //creado:s-----------------------------------------------------------
 //    private static void initializeBoard() {
@@ -121,4 +127,3 @@ public class Main {
 //        }
 //        return true;
 //    }
-}
